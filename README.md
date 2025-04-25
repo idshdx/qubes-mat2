@@ -1,4 +1,4 @@
-Secure Metadata Scrubbing Infrastructure for Qubes OS
+# Secure Metadata Scrubbing Infrastructure for Qubes OS
 
 ---
 
