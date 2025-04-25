@@ -1,0 +1,3 @@
+proxy-cleaner-dvm mat2-cleaner-dvm my.CleanImage allow
+work-vault mat2-cleaner-dvm my.CleanImage deny
+* * my.CleanImage deny

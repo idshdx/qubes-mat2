@@ -1,0 +1,20 @@
+#!/bin/bash
+set -euo pipefail
+
+read source_path
+
+CLEAN_DIR="/home/user/Cleaned"
+
+mkdir -p "$CLEAN_DIR"
+
+echo "Cleaning file: $source_path"
+
+mat2 --inplace "$source_path"
+
+qvm-move-to-vm work-vault "$source_path"
+
+# Notify user
+notify-send "MAT2 Cleaner" "File cleaned and moved to work-vault."
+
+# Auto-shutdown this disposable cleaner VM
+qvm-shutdown --wait @dispvm:mat2-cleaner-dvm
