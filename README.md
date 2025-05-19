@@ -4,7 +4,7 @@
 
 ## 1. Overview
 
-This repository provides a secure, reproducible, GitOps-driven Qubes OS infrastructure for automatically cleaning metadata from images using MAT2, enforced through disposable VMs, strict qrexec policies, and full GitOps management.
+This repository provides a secure, reproducible, GitOps-driven Qubes OS infrastructure for automatically cleaning metadata from images using MAT2, enforced through disposable VMs, strict qrexec policies.
 
 **Core Principles:**
 - Security-first (least privilege, disposable-based).
