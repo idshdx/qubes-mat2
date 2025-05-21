@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# Ask user with zenity
 FILE="$1"
 
 if [ ! -f "$FILE" ]; then
@@ -9,6 +8,7 @@ if [ ! -f "$FILE" ]; then
     exit 1
 fi
 
+# Ask user with zenity
 ANSWER=$(zenity --question \
     --title="Confirm Upload" \
     --text="Do you really want to upload this file anonymously?" \
@@ -17,7 +17,6 @@ ANSWER=$(zenity --question \
     && echo yes || echo no)
 
 if [[ "$ANSWER" == "yes" ]]; then
-    # Proceed with upload
     torsocks curl -F "file=@${FILE}" "https://filebin.net"
     notify-send "Upload" "File uploaded anonymously."
 else
